@@ -1,5 +1,6 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
 
 import logoText from '../assets/images/Logo-text.png'
 import teacherI from '../assets/images/teacher-1.png'
@@ -9,7 +10,7 @@ import teacherIV from '../assets/images/teacher-4.png'
 import teacherV from '../assets/images/teacher-5.png'
 
 function Home() {
-  const teacher = [
+  const teachers = [
     {
       id:'t001',
       name:'洪琦雯',
@@ -133,75 +134,37 @@ function Home() {
                   <span className="swiper-next swiper-btn"><i className="bi bi-arrow-right-short arrow-right align-middle fs-2"></i></span>
                 </div>
               </div>
-              <div className="swiper teacher-swiper py-7 p-md-11">
-                <div className="swiper-wrapper ps-4 ps-md-0">
-                  <div className="swiper-slide teacher-box">
-                    <div>
-                      <div className="position-relative mb-5">
-                        <h4 className="position-absolute text-success rotate mbti-type mbti-p">INFP</h4>
-                        <img src="/assets/images/teacher-1.png" alt="teacher-1" className="teacher-image" />
+              <Swiper
+                className="py-7 p-md-6"
+                slidesPerView={3}
+                spaceBetween={24}
+                breakpoints={{
+                  375:{
+                    slidesPerView:1
+                  },
+                  576:{
+                    slidesPerView:3
+                  },
+                }}
+              >
+                {teachers.map((teacher) => {
+                  return(
+                    <SwiperSlide className="teacher-box" key={teacher.id}>
+                      <div>
+                        <div className="position-relative mb-5">
+                          <h4 className="position-absolute text-success rotate mbti-type mbti-p">{teacher.mbti}</h4>
+                          <img src={teacher.image} alt="teacher-1" className="teacher-image" />
+                        </div>
+                        <div className="d-flex flex-column jutify-content-center px-5">
+                          <h5 className="text-center mb-2">{teacher.name}</h5>
+                          <p className="text-center mb-5">{teacher.title}</p>
+                          <a href="#" className="btn btn-outline-primary-dark border-2 text-nowrap">{teacher.course} <i className="bi bi-arrow-right"></i></a>
+                        </div>
                       </div>
-                      <div className="d-flex flex-column jutify-content-center px-5">
-                        <h5 className="text-center mb-2">洪琦雯</h5>
-                        <p className="text-center mb-5">視覺設計總監</p>
-                        <a href="#" className="btn btn-outline-primary-dark border-2 text-nowrap">創意視覺傳達 <i className="bi bi-arrow-right"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="swiper-slide teacher-box">
-                    <div className="">
-                      <div className="position-relative mb-5">
-                        <h4 className="position-absolute text-success rotate mbti-type mbti-p">ESFP</h4>
-                        <img src="/assets/images/teacher-2.png" alt="teacher-2" className="teacher-image" />
-                      </div>
-                      <div className="d-flex flex-column jutify-content-center px-5">
-                        <h5 className="text-center mb-2">陳靜儀</h5>
-                        <p className="text-center mb-5">銷售分析師</p>
-                        <a href="#" className="btn btn-outline-primary-dark border-2 text-nowrap">數位行銷策略 <i className="bi bi-arrow-right"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="swiper-slide teacher-box">
-                    <div className="">
-                      <div className="position-relative mb-5">
-                        <h4 className="position-absolute text-success rotate mbti-type mbti-p">ESTJ</h4>
-                        <img src="/assets/images/teacher-3.png" alt="teacher-3" className="teacher-image"/>                
-                      </div>
-                      <div className="d-flex flex-column jutify-content-center px-5">
-                        <h5 className="text-center mb-2">李佳蓉</h5>
-                        <p className="text-center mb-5">資深人資經理</p>
-                        <a href="#" className="btn btn-outline-primary-dark border-2 text-nowrap">人力資源管理 <i className="bi bi-arrow-right"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="swiper-slide teacher-box">
-                    <div className="">
-                      <div className="position-relative mb-5">
-                        <h4 className="position-absolute text-success rotate mbti-type mbti-p">INTJ</h4>
-                        <img src="/assets/images/teacher-4.png" alt="teacher-4" className="teacher-image"/>
-                      </div>
-                      <div className="d-flex flex-column jutify-content-center px-5">
-                        <h5 className="text-center mb-2">陳靜儀</h5>
-                        <p className="text-center mb-5">銷售分析師</p>
-                        <a href="#" className="btn btn-outline-primary-dark border-2 text-nowrap">數位行銷策略 <i className="bi bi-arrow-right"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="swiper-slide teacher-box">
-                    <div className="">
-                      <div className="position-relative mb-5">
-                        <h4 className="position-absolute text-success rotate mbti-type mbti-p">ENFP</h4>
-                        <img src="/assets/images/teacher-5.png" alt="teacher-5" className="teacher-image"/>
-                      </div>
-                      <div className="d-flex flex-column jutify-content-center px-5">
-                        <h5 className="text-center mb-2">洪琦雯</h5>
-                        <p className="text-center mb-5">視覺設計總監</p>
-                        <a href="#" className="btn btn-outline-primary-dark border-2 text-nowrap">創意視覺傳達 <i className="bi bi-arrow-right"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                    </SwiperSlide>
+                  )
+                })}
+              </Swiper>
             </div>
           </div>
         </div>
