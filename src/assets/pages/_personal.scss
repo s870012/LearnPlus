@@ -1,0 +1,35 @@
+//personal data
+.photo-img{
+    width: 80px;
+    object-fit: cover;
+    border-radius: 88px;
+}
+.btn-width{
+    width: 100%;
+}
+@include md{
+    .btn-width{
+        width: auto;
+    }
+}
+.p-bg{
+    background-color: $gray-20;
+}
+
+//certificate
+.certificate-img{
+    width: 107px;
+}
+.certificate-h{
+    height: 464px;
+}
+@include lg{
+    .certificate-h{
+        height: 500px;
+    }
+}
+
+//course-list
+.courselist-bg{
+    background-color: $gray-20;
+}

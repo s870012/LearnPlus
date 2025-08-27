@@ -1,0 +1,262 @@
+//banner
+.banner-bg{
+  background-image: url("../images/Banner-sm.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 480px;
+}
+@include sm{
+  .banner-bg{
+    background-image: url("../images/Banner.png");
+    height: 800px;
+  }
+}
+.slogan-position{
+  padding-top: 280px;
+}
+@include sm{
+  .slogan-position{
+    padding-top: 393px;
+  }
+}
+.slogan{
+  font-size: 40px;
+  font-weight: 700;
+  -webkit-text-stroke: 8px $white;
+}
+.slogan::after{
+  content:attr(data-stroke);
+  color: $green;
+  position: absolute;
+  left: 0;
+  font-style: 40px;
+  font-weight: 700;
+  -webkit-text-stroke: 0;
+}
+@include sm{
+  .slogan{
+    font-size: 96px;
+    font-weight: 900;
+  }
+  .slogan::after{
+    font-style: 96px;
+    font-weight: 900;
+  }
+  .me-128{
+    margin-right: 128px;
+  }
+  .ms-96{
+    margin-left: 96px;
+  }
+}
+
+//intro
+.plus{
+  width: 165px;
+}
+@include lg{
+  .plus{
+    width: 250px;
+  }
+}
+.circle-box{
+  background-color: #FFF;
+  height: 351px;
+  max-width: 351px;
+}
+.circle-out{
+  width: 184px;
+  height: 184px;
+  border: 2px solid $gray-80;
+  border-radius: 800px;
+  position: relative;
+}
+.circle-ins{
+  width: 160px;
+  height: 160px;
+  border: 2px dashed $primary-dark;
+  border-radius: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.circle-position-1{
+  left: 20px;
+  top: 0;
+}
+.circle-position-2{
+  left: 167px;
+  top: 103px;
+}
+.circle-position-3{
+  left: 0;
+  top: 167px;
+}
+@include xl{
+  .circle-box{
+    max-width: 416px;
+    height: 416px;
+  }
+  .circle-out{
+    width: 232px;
+    height: 232px;
+  }
+  .circle-ins{
+    width: 200px;
+    height: 200px;
+  }
+  .circle-position-1{
+    left: 28px;
+    top: 0;
+  }
+  .circle-position-2{
+    left: 184px;
+    top: 120px;
+  }
+  .circle-position-3{
+    left: 0;
+    top: 184px;
+  }
+}
+//teacher
+.mac-border{
+  border-bottom: 4px solid $gray-20;
+}
+@include sm{
+  .mac-border{
+    border: 4px solid $gray-20;
+    border-radius: 16px;
+  }
+}
+.mac-header-bg{
+  background-color: $gray-20;
+}
+.mac-sign{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+@include sm{
+  .mac-sign{
+    width: 16px;
+    height: 16px;
+  }
+}
+.arrow-left::before{
+  padding: 20px;
+  background-color: $white;
+  border-bottom-left-radius: 16px;
+}
+.arrow-right::before{
+  padding: 20px;
+  background-color: $white;
+  border-top-right-radius: 16px;
+}
+.teacher-box{
+  width: 240px;
+}
+@include sm{
+  .teacher-box{
+    width: 300px;
+  }
+}
+.mbti-type{
+  padding: 8px 16px;
+  background-color: $white;
+}
+.mbti-p{
+  right: 0;
+  top: 20px;
+}
+@include lg{
+  .mbti-p{
+    top: 0px;
+  }
+}
+@include xl{
+  .mbti-p{
+    top: 10px;
+  }
+}@include xxl{
+  .mbti-p{
+    top: 30px;
+  }
+}
+.teacher-image{
+  border: 4px solid $green;
+  border-radius: 200px;
+  object-fit: cover;
+}
+
+//mbtitest
+.mbti-box{
+  width: 100%;
+  height: 320px;
+}
+.mbti-image{
+  width: 100%;
+}
+
+//course
+.course-radius{
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+@include md{
+  .course-radius-all{
+    border-radius: 40px;
+  }
+}
+.course-head-bg{
+  background-color: #f3f1e0;
+  background-image: url("../images/course-bg.png");
+}
+.course-bg{
+  background-color: #f3f1e0;
+  background-image: url("../images/course-bg.png");
+}
+
+//Q & A
+.qa-bg{
+  background-image: url("../images/Rectangle-9.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+.form-bg{
+  background-color: $gray-20;
+}
+.form-border{
+  border: 2px solid $black;
+  border-radius: 24px;
+  box-shadow: 0 5px 16px 0 rgb(8, 15, 52, 6%);
+}
+@include md{
+  .form-border{
+    max-width: 1076px;
+  }
+}
+.form-width{
+  max-width: 351px;
+}
+@include md{
+  .form-width{
+    max-width: 636px;
+  }
+}
+
+.accordion-h{
+  height: 380px;
+}
+@include md{
+  .accordion-h{
+    height: 600px;
+  }
+}
+.faq-position{
+  position: absolute;
+  right: 3%;
+  bottom: 64px;
+}

@@ -1,0 +1,13 @@
+.recordNum ul{
+    height: 300px;
+    list-style-type: none;
+}
+@media (max-width: 576px){
+.recordNum{
+   display: none;
+}}
+.styleofLearn img{
+    border-radius:  100px 100px 0px 0px;
+    box-shadow: 20px 15px 15px rgb(91, 91, 90);
+    height: 200px;
+}

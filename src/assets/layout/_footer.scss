@@ -1,0 +1,24 @@
+.logo-text{
+  max-width: 126px;
+}
+
+.btn-width{
+  width: 169.5px;
+}
+@include lg{
+  .btn-width{
+    width: 144px;
+  }
+}
+.qr-size{
+  max-width: 140px;
+  height: 140px;
+}
+.qr-border{
+  border: 2px solid $gray-80;
+  border-radius: 8px;
+  padding: 8px;
+}
+.copyright-bg{
+  background-color: $gray-80;
+}

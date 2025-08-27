@@ -1,0 +1,205 @@
+//text-color
+.text-primary-dark{
+    color: $primary-dark;
+}
+.text-gray-80{
+    color: $gray-80;
+}
+.text-gray-60{
+    color: $gray-60;
+}
+.text-gray-40{
+    color: $gray-40;
+}
+//bg-color
+.bg-gray-40{
+    background-color: $gray-40;
+}
+.bg-gray-80{
+    background-color: $gray-80;
+}
+.bg-green-light{
+    background-color: $green-light;
+}
+.tag-01{
+    background-color: $tag-01;
+}
+.tag-02{
+    background-color: $tag-02;
+}
+.tag-03{
+    background-color: $tag-03;
+}
+.tag-04{
+    background-color: $tag-04;
+}
+//tag-pill
+.tag-pill{
+    padding: 8px 12px;
+    border-radius: 24px;
+    border: 2px solid $gray-80;
+}
+//rotate
+.rotate{
+    transform: rotate(45deg);
+}
+//btn
+.btn-padding-sm{
+    padding: 12px 24px;
+}
+
+//swiper-btn
+.swiper-btn{
+    background-color: $white;
+}
+.swiper-btn:hover{
+    color: $white;
+    background-color: $gray-40;
+}
+.btn-l{
+    border-bottom-left-radius: 16px;
+}
+.btn-r{
+    border-top-right-radius: 16px;
+}
+.swiper-radius{
+    border-bottom-left-radius: 36px;
+    border-top-right-radius: 40px;
+}
+//radius
+.radius-8{
+    border-radius: 8px;
+}
+.radius-bottom-8{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.radius-24{
+    border-radius: 24px;
+}
+.radius-32{
+    border-radius: 32px !important;
+}
+
+//form
+.border-search{
+    border: 2px solid $black ;
+    border-right: 0;
+}
+.border-input{
+    border: 2px solid $black;
+    border-left: 0;
+    &:focus{
+        border: 2px solid $black;
+        border-left: 0;
+        box-shadow: none;
+    }
+}
+
+//container
+.container-screen{
+    width: 100%;
+}
+@include md{
+    .container-screen{
+        width: 83%;
+    }
+}
+
+//zindex
+.zindex-1000{
+    z-index: 1000;
+}
+
+//cursor
+.cursor{
+    cursor: pointer;
+}
+
+//border
+.border-2px{
+    border: 2px solid $black;
+}
+.border-bottom-black{
+    border-bottom: 1px solid $black !important;
+}
+
+//overflow
+@include xl {
+    .overflow{
+        overflow: visible;
+    }
+}
+
+//icon-bg
+.icon-bg{
+    background-color: $primary-light;
+    padding: 12px;
+}
+
+//circle
+.circle-prograss{
+    --width: 128px;
+    --percent: 75;
+    --deg: calc(360deg * calc(var(--percent) / 100));
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background-image: conic-gradient(#D1E9DD var(--deg), #fff var(--deg));
+    border: 1px solid #000;
+    position: relative;
+}
+.circle-submit{
+    --width: 128px;
+    --percent: 0;
+    --deg: calc(360deg * calc(var(--percent) / 100));
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background-image: conic-gradient(#D1E9DD var(--deg), #fff var(--deg));
+    border: 1px solid #000;
+    position: relative;
+}
+.circle-score{
+    --width: 128px;
+    --percent: 0;
+    --deg: calc(360deg * calc(var(--percent) / 100));
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background-image: conic-gradient(#D1E9DD var(--deg), #fff var(--deg));
+    border: 1px solid #000;
+    position: relative;
+}
+.circle-certificate{
+    --width: 128px;
+    --percent: 100;
+    --deg: calc(360deg * calc(var(--percent) / 100));
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background-image: conic-gradient(#D1E9DD var(--deg), #fff var(--deg));
+    border: 1px solid #000;
+    position: relative;
+}
+.circle-inside{
+    --bar-width: 30px;
+    position: absolute;
+    display: flex;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 15%);
+    border-radius: 50%;
+    background: #ffff;
+    width: calc(var(--width) - var(--bar-width));
+    height: calc(var(--width) - var(--bar-width));
+    align-items: center;
+    padding: 0;
+    justify-content: center;
+    font-weight:medium;
+}
+.circle-text{
+    position: absolute;
+    top: 65%;
+    left: 30%;
+}

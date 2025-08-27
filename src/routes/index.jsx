@@ -1,9 +1,16 @@
-
+import Layout from "../Layout"
+import Home from "../pages/Home"
 
 const routes = [
   {
     path:'/',
-    element:''
+    element:<Layout/>,
+    children:[
+      {
+        path:'',
+        element:<Home/>
+      }
+    ]
   }
 ]
 
