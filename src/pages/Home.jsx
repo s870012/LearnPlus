@@ -1,6 +1,8 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Grid } from 'swiper/modules'
 import 'swiper/css'
+import 'swiper/css/grid';
 
 import logoText from '../assets/images/Logo-text.png'
 import teacherI from '../assets/images/teacher-1.png'
@@ -8,6 +10,19 @@ import teacherII from '../assets/images/teacher-2.png'
 import teacherIII from '../assets/images/teacher-3.png'
 import teacherIV from '../assets/images/teacher-4.png'
 import teacherV from '../assets/images/teacher-5.png'
+
+import courseI from '../assets/images/course-1.png'
+import courseII from '../assets/images/course-2.png'
+import courseIII from '../assets/images/course-3.png'
+import courseIV from '../assets/images/course-4.png'
+import courseV from '../assets/images/course-5.png'
+import courseVI from '../assets/images/course-6.png'
+
+import discount from '../assets/images/discount-88.png'
+import mbtiImage from '../assets/images/mbti-image.png'
+import mbtiImageSm from '../assets/images/mbti-image-sm.png'
+import faq from '../assets/images/FAQ.png'
+import star from '../assets/images/kid_star.png'
 
 function Home() {
   const teachers = [
@@ -50,6 +65,81 @@ function Home() {
       course:'創意視覺傳達',
       mbti:'ENFP',
       image: teacherV
+    },
+  ]
+
+  const courses = [
+    {
+      id:'c001',
+      course:'時間管理技巧',
+      teacher:'高宇琛',
+      price:899,
+      mbti:'ESTP',
+      tips:['語言與文學', '直播課程'],
+      viewer:858,
+      star:4.9,
+      image:courseI,
+      discount:discount
+    },
+    {
+      id:'c002',
+      course:'陶瓷藝術入門',
+      teacher:'高宇琛',
+      price:899,
+      mbti:'ESTP',
+      tips:['陶瓷藝術入門', '精品文章'],
+      viewer:858,
+      star:4.9,
+      image:courseII,
+      discount:discount
+    },
+    {
+      id:'c003',
+      course:'韓語口語實踐',
+      teacher:'高宇琛',
+      price:899,
+      mbti:'ESTP',
+      tips:['語言與文學', '錄製課程'],
+      viewer:858,
+      star:4.9,
+      image:courseIII,
+      discount:discount
+    },
+    {
+      id:'c004',
+      course:'數位行銷策略',
+      teacher:'高宇琛',
+      price:899,
+      mbti:'ESTP',
+      tips:['語言與文學', '課程組合'],
+      viewer:858,
+      star:4.9,
+      image:courseIV,
+      discount:discount
+    },
+    {
+      id:'c005',
+      course:'創意視覺故事',
+      teacher:'高宇琛',
+      price:899,
+      mbti:'ESTP',
+      tips:['語言與文學', '數位行銷策略'],
+      viewer:858,
+      star:4.9,
+      image:courseV,
+      discount:discount
+    },
+    {
+      id:'c006',
+      course:'全球化的利與弊',
+      teacher:'高宇琛',
+      price:899,
+      mbti:'ESTP',
+      tips:['語言與文學', '直播課程'],
+      viewer:858,
+      star:4.9,
+      image:courseVI,
+      discount:discount
     },
   ]
 
@@ -188,217 +278,73 @@ function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-10 mx-md-auto">
-              <div className="swiper course-swiper py-7 py-lg-9 overflow">
-                <div className="swiper-wrapper">
-                  <div className="swiper-slide">
-                    <div className="card card-width border-0 position-relative radius-32">
-                      <img src="/assets/images/Discount-88.png" alt="Discount-88" className="dis-position dis-width"/>
-                      <div className="card-header border-0 position-relative bg-white pt-7 px-7 radius-32">
-                        <img src="/assets/images/course-1.png" alt="course-1" className="card-img"/>
-                        <form action="#" className="card-icon-position">
-                          <input type="checkbox" id="collect" className="collect-ctrl d-none"/>
-                          <label htmlFor="collect" className="collect-bookmark cursor card-icon-bg me-2"><i className="bi bi-bookmark fs-5"></i></label>
-                          <label htmlFor="collect" className="collect-bookmark-fill cursor card-icon-bg me-2"><i className="bi bi-bookmark-fill fs-5"></i></label>
-                          <label htmlFor="cart" className="card-icon-bg"><i className="bi bi-cart fs-5"></i></label>
-                        </form>
-                      </div>
-                      <div className="card-body border-0 border-bottom-black px-0 mx-7">
-                        <div className="d-flex">
-                          <p className="tag-pill bg-gray-40 me-2 text-nowrap">語言與文學</p>
-                          <p className="tag-pill tag-03 text-nowrap">直播課程</p>
+              <Swiper
+                className="py-9 px-5"
+                modules={Grid}
+                slidesPerView={3}
+                grid={{
+                  rows: 1,
+                }}
+                spaceBetween={24}
+                breakpoints={{
+                  375:{
+                    slidesPerView:1
+                  },
+                  576:{
+                    slidesPerView:2
+                  },
+                  768:{
+                    slidesPerView:3,
+                    grid:{
+                      rows:2,
+                      fill:'row'
+                    }
+                  }
+                }}
+              >
+                {courses.map((course) => {
+                  return(
+                    <SwiperSlide className="teacher-box mb-5" key={course.id}>
+                      <div className="card card-width border-0 position-relative radius-32">
+                        <img src={course.discount} alt="Discount-88" className="dis-position dis-width"/>
+                        <div className="card-header border-0 position-relative bg-white pt-7 px-7 radius-32">
+                          <img src={course.image} alt="course-1" className="card-img"/>
+                          <form action="#" className="card-icon-position">
+                            <input type="checkbox" id="collect" className="collect-ctrl d-none"/>
+                            <label htmlFor="collect" className="collect-bookmark cursor card-icon-bg me-2"><i className="bi bi-bookmark fs-5"></i></label>
+                            <label htmlFor="collect" className="collect-bookmark-fill cursor card-icon-bg me-2"><i className="bi bi-bookmark-fill fs-5"></i></label>
+                            <label htmlFor="cart" className="card-icon-bg"><i className="bi bi-cart fs-5"></i></label>
+                          </form>
                         </div>
-                        <h4 className="mb-2 mt-5"><a href="#" className="text-gray-80 stretched-link">時間管理技巧</a></h4>
-                        <div className="d-flex">
-                          <p className="me-4">講師－高宇琛</p>
-                          <p className="text-primary">ESTP</p>
+                        <div className="card-body border-0 border-bottom-black px-0 mx-7">
+                          <div className="d-flex">
+                            <p className="tag-pill bg-gray-40 me-2 text-nowrap">{course.tips[0]}</p>
+                            <p className="tag-pill tag-03 text-nowrap">{course.tips[1]}</p>
+                          </div>
+                          <h4 className="mb-2 mt-5"><a href="#" className="text-gray-80 stretched-link">{course.course}</a></h4>
+                          <div className="d-flex">
+                            <p className="me-4">講師－{course.teacher}</p>
+                            <p className="text-primary">{course.mbti}</p>
+                          </div>
                         </div>
-                      </div>
-                      <div className="card-footer border-0 bg-white px-7 pt-5 pb-7 radius-32">
-                        <div className="d-flex justify-content-between">
-                          <h4>NT 899</h4>
-                          <div className="d-flex justify-content-between align-items-center">
-                            <img src="/assets/images/kid_star.png" alt="star"/>
-                            <p className="text-nowrap text-success">4.9 (858)</p>
+                        <div className="card-footer border-0 bg-white px-7 pt-5 pb-7 radius-32">
+                          <div className="d-flex justify-content-between">
+                            <h4>NT {course.price}</h4>
+                            <div className="d-flex justify-content-between align-items-center">
+                              <img src={star} alt="star"/>
+                              <p className="text-nowrap text-success">{course.star} ({course.viewer})</p>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="card card-width border-0 position-relative radius-32">
-                      <img src="/assets/images/Discount-88.png" alt="Discount-88" className="dis-position dis-width"/>
-                      <div className="card-header border-0 position-relative bg-white pt-7 px-7 radius-32">
-                        <img src="/assets/images/course-2.png" alt="course-2" className="card-img" />
-                        <form action="#" className="card-icon-position">
-                          <input type="checkbox" id="collect" className="collect-ctrl d-none" />
-                          <label htmlFor="collect" className="collect-bookmark cursor card-icon-bg me-2"><i className="bi bi-bookmark fs-5"></i></label>
-                          <label htmlFor="collect" className="collect-bookmark-fill cursor card-icon-bg me-2"><i className="bi bi-bookmark-fill fs-5"></i></label>
-                        </form>
-                      </div>
-                      <div className="card-body border-0 border-bottom-black px-0 mx-7">
-                        <div className="d-flex">
-                          <p className="tag-pill bg-gray-40 me-2 text-nowrap">陶瓷藝術入門</p>
-                          <p className="tag-pill tag-01 text-nowrap">精品文章</p>
-                        </div>
-                        <h4 className="mb-2 mt-5"><a href="#" className="text-gray-80 stretched-link">陶瓷藝術入門</a></h4>
-                        <div className="d-flex">
-                          <p className="me-4">講師－高宇琛</p>
-                          <p className="text-primary">ESTP</p>
-                        </div>
-                      </div>
-                      <div className="card-footer border-0 bg-white px-7 pt-5 pb-7 radius-32">
-                        <div className="d-flex justify-content-between">
-                          <h4>NT 899</h4>
-                          <div className="d-flex justify-content-between align-items-center">
-                            <img src="/assets/images/kid_star.png" alt="star"/>
-                            <p className="text-nowrap text-success">4.9 (858)</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="card card-width border-0 position-relative radius-32">
-                      <img src="/assets/images/Discount-88.png" alt="Discount-88" className="dis-position dis-width"/>
-                      <div className="card-header border-0 position-relative bg-white pt-7 px-7 radius-32">
-                        <img src="/assets/images/course-3.png" alt="course-3" className="card-img"/>
-                        <form action="#" className="card-icon-position">
-                          <input type="checkbox" id="collect" className="collect-ctrl d-none"/>
-                          <label htmlFor="collect" className="collect-bookmark cursor card-icon-bg me-2"><i className="bi bi-bookmark fs-5"></i></label>
-                          <label htmlFor="collect" className="collect-bookmark-fill cursor card-icon-bg me-2"><i className="bi bi-bookmark-fill fs-5"></i></label>
-                          <label htmlFor="cart" className="card-icon-bg"><i className="bi bi-cart fs-5"></i></label>
-                        </form>
-                      </div>
-                      <div className="card-body border-0 border-bottom-black px-0 mx-7">
-                        <div className="d-flex">
-                          <p className="tag-pill bg-gray-40 me-2 text-nowrap">語言與文學</p>
-                          <p className="tag-pill tag-02 text-nowrap">錄製課程</p>
-                        </div>
-                        <h4 className="mb-2 mt-5"><a href="#" className="text-gray-80 stretched-link">韓語口語實踐</a></h4>
-                        <div className="d-flex">
-                          <p className="me-4">講師－高宇琛</p>
-                          <p className="text-primary">ESTP</p>
-                        </div>
-                      </div>
-                      <div className="card-footer border-0 bg-white px-7 pt-5 pb-7 radius-32">
-                        <div className="d-flex justify-content-between">
-                          <h4>NT 899</h4>
-                          <div className="d-flex justify-content-between align-items-center">
-                            <img src="/assets/images/kid_star.png" alt="star"/>
-                            <p className="text-nowrap text-success">4.9 (858)</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="card card-width border-0 position-relative radius-32">
-                      <img src="/assets/images/Discount-88.png" alt="Discount-88" className="dis-position dis-width"/>
-                      <div className="card-header border-0 position-relative bg-white pt-7 px-7 radius-32">
-                        <img src="/assets/images/course-4.png" alt="course-4" className="card-img"/>
-                        <form action="#" className="card-icon-position">
-                          <input type="checkbox" id="collect" className="collect-ctrl d-none"/>
-                          <label htmlFor="collect" className="collect-bookmark cursor card-icon-bg me-2"><i className="bi bi-bookmark fs-5"></i></label>
-                          <label htmlFor="collect" className="collect-bookmark-fill cursor card-icon-bg me-2"><i className="bi bi-bookmark-fill fs-5"></i></label>
-                          <label htmlFor="cart" className="card-icon-bg"><i className="bi bi-cart fs-5"></i></label>
-                        </form>
-                      </div>
-                      <div className="card-body border-0 border-bottom-black px-0 mx-7">
-                        <div className="d-flex">
-                          <p className="tag-pill bg-gray-40 me-2 text-nowrap">語言與文學</p>
-                          <p className="tag-pill tag-04 text-nowrap">課程組合</p>
-                        </div>
-                        <h4 className="mb-2 mt-5"><a href="#" className="text-gray-80 stretched-link">數位行銷策略</a></h4>
-                        <div className="d-flex">
-                          <p className="me-4">講師－高宇琛</p>
-                          <p className="text-primary">ESTP</p>
-                        </div>
-                      </div>
-                      <div className="card-footer border-0 bg-white px-7 pt-5 pb-7 radius-32">
-                        <div className="d-flex justify-content-between">
-                          <h4>NT 899</h4>
-                          <div className="d-flex justify-content-between align-items-center">
-                            <img src="/assets/images/kid_star.png" alt="star"/>
-                            <p className="text-nowrap text-success">4.9 (858)</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="card card-width border-0 position-relative radius-32">
-                      <img src="/assets/images/Discount-88.png" alt="Discount-88" className="dis-position dis-width"/>
-                      <div className="card-header border-0 position-relative bg-white pt-7 px-7 radius-32">
-                        <img src="/assets/images/course-5.png" alt="course-5" className="card-img"/>
-                        <form action="#" className="card-icon-position">
-                          <input type="checkbox" id="collect" className="collect-ctrl d-none"/>
-                          <label htmlFor="collect" className="collect-bookmark cursor card-icon-bg me-2"><i className="bi bi-bookmark fs-5"></i></label>
-                          <label htmlFor="collect" className="collect-bookmark-fill cursor card-icon-bg me-2"><i className="bi bi-bookmark-fill fs-5"></i></label>
-                          <label htmlFor="cart" className="card-icon-bg"><i className="bi bi-cart fs-5"></i></label>
-                        </form>
-                      </div>
-                      <div className="card-body border-0 border-bottom-black px-0 mx-7">
-                        <div className="d-flex">
-                          <p className="tag-pill bg-gray-40 me-2 text-nowrap">語言與文學</p>
-                          <p className="tag-pill tag-02 text-nowrap">數位行銷策略</p>
-                        </div>
-                        <h4 className="mb-2 mt-5"><a href="#" className="text-gray-80 stretched-link">創意視覺故事</a></h4>
-                        <div className="d-flex">
-                          <p className="me-4">講師－高宇琛</p>
-                          <p className="text-primary">ESTP</p>
-                        </div>
-                      </div>
-                      <div className="card-footer border-0 bg-white px-7 pt-5 pb-7 radius-32">
-                        <div className="d-flex justify-content-between">
-                          <h4>NT 899</h4>
-                          <div className="d-flex justify-content-between align-items-center">
-                            <img src="/assets/images/kid_star.png" alt="star"/>
-                            <p className="text-nowrap text-success">4.9 (858)</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="card card-width border-0 position-relative radius-32">
-                      <img src="/assets/images/Discount-88.png" alt="Discount-88" className="dis-position dis-width"/>
-                      <div className="card-header border-0 position-relative bg-white pt-7 px-7 radius-32">
-                        <img src="/assets/images/course-6.png" alt="course-6" className="card-img"/>
-                        <form action="#" className="card-icon-position">
-                          <input type="checkbox" id="collect" className="collect-ctrl d-none"/>
-                          <label htmlFor="collect" className="collect-bookmark cursor card-icon-bg me-2"><i className="bi bi-bookmark fs-5"></i></label>
-                          <label htmlFor="collect" className="collect-bookmark-fill cursor card-icon-bg me-2"><i className="bi bi-bookmark-fill fs-5"></i></label>
-                          <label htmlFor="cart" className="card-icon-bg"><i className="bi bi-cart fs-5"></i></label>
-                        </form>
-                      </div>
-                      <div className="card-body border-0 border-bottom-black px-0 mx-7">
-                        <div className="d-flex">
-                          <p className="tag-pill bg-gray-40 me-2 text-nowrap">語言與文學</p>
-                          <p className="tag-pill tag-03 text-nowrap">直播課程</p>
-                        </div>
-                        <h4 className="mb-2 mt-5"><a href="#" className="text-gray-80 stretched-link">全球化的利與弊</a></h4>
-                        <div className="d-flex">
-                          <p className="me-4">講師－高宇琛</p>
-                          <p className="text-primary">ESTP</p>
-                        </div>
-                      </div>
-                      <div className="card-footer border-0 bg-white px-7 pt-5 pb-7 radius-32">
-                        <div className="d-flex justify-content-between">
-                          <h4>NT 899</h4>
-                          <div className="d-flex justify-content-between align-items-center">
-                            <img src="/assets/images/kid_star.png" alt="star"/>
-                            <p className="text-nowrap text-success">4.9 (858)</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  </div>
-                </div>
-              </div>
+                    </SwiperSlide>
+                  )
+                })}
+              </Swiper>     
             </div>
           </div>
         </div>
+      </div>  
     </section>
     {/* mbtitest */}
     <section>
@@ -417,8 +363,8 @@ function Home() {
           </div>
         </div>
         <picture>
-          <source srcSet="/assets/images/mbti-image.png" media="(min-width:768px)"/>
-          <img src="/assets/images/mbti-image-sm.png" alt="mbti-image-sm" className="mbti-image" />
+          <source srcSet={mbtiImage} media="(min-width:768px)"/>
+          <img src={mbtiImageSm} alt="mbti-image-sm" className="mbti-image" />
         </picture>
       </div>
     </section>
@@ -506,7 +452,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <img src="/assets/images/FAQ.png" alt="FAQ" className="d-none d-xxl-block faq-position"/>
+      <img src={faq} alt="FAQ" className="d-none d-xxl-block faq-position"/>
     </section>
   </>)
 }
