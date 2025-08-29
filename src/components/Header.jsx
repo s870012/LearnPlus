@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router'
+
 import Logo from '../assets/images/Logo.png'
 import singIn from '../assets/images/sign-in.png'
 
@@ -21,7 +23,7 @@ function Header () {
                   </li>
                   <li className="nav-item"><a className="nav-link active text-gray-60 pt-6"  href="#">精選文章</a></li>
                   <li className="nav-item"><a className="nav-link text-gray-60" href="mainCourse.html">課程專區</a></li>
-                  <li className="nav-item"><a className="nav-link text-gray-60" href="#">我的課程</a></li>
+                  <NavLink to="/profile" className="nav-item"><a className="nav-link text-gray-60" href="#">我的課程</a></NavLink>
                   <li className="nav-item"><a className="nav-link text-gray-60" href="aboutUs.html">關於我們</a></li>
                   <li><a href="#"><img src={singIn} alt="sign in" className="clockIN pt-2 pb-6"/></a></li>
                   <li className="signIN d-flex align-items-center">

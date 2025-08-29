@@ -1,11 +1,11 @@
-.card-width{
-    max-width: 320px;
-}
-@include md{
-    .card-width{
-        max-width: 340px;
-    }
-}
+// .card-width{
+//     max-width: 320px;
+// }
+// @include md{
+//     .card-width{
+//         max-width: 340px;
+//     }
+// }
 .card-img{
     border: 2px solid $gray-80;
     border-radius: 8px;

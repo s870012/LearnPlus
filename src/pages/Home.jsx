@@ -279,33 +279,30 @@ function Home() {
           <div className="row">
             <div className="col-md-10 mx-md-auto">
               <Swiper
-                className="py-9 px-5"
+                className="py-9"
                 modules={Grid}
                 slidesPerView={3}
                 grid={{
-                  rows: 1,
+                  rows: 2,
+                  fill:"row"
                 }}
-                spaceBetween={24}
+                spaceBetween={16}
                 breakpoints={{
                   375:{
                     slidesPerView:1
                   },
-                  576:{
-                    slidesPerView:2
-                  },
                   768:{
+                    slidesPerView:2,
+                  },
+                  1200:{
                     slidesPerView:3,
-                    grid:{
-                      rows:2,
-                      fill:'row'
-                    }
                   }
                 }}
               >
                 {courses.map((course) => {
                   return(
                     <SwiperSlide className="teacher-box mb-5" key={course.id}>
-                      <div className="card card-width border-0 position-relative radius-32">
+                      <div className="card border-0 position-relative radius-32">
                         <img src={course.discount} alt="Discount-88" className="dis-position dis-width"/>
                         <div className="card-header border-0 position-relative bg-white pt-7 px-7 radius-32">
                           <img src={course.image} alt="course-1" className="card-img"/>
