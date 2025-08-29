@@ -1,3 +1,21 @@
+import { Link } from 'react-router'
+
+import selfie from '../assets/images/photo-1.png'
+import certificate from '../assets/images/certificate.png'
+import courseXII from '../assets/images/course-12.png'
+import courseXIII from '../assets/images/course-13.png'
+import courseXIV from '../assets/images/course-14.png'
+import courseXV from '../assets/images/course-15.png'
+import courseXVI from '../assets/images/course-16.png'
+import courseXXI from '../assets/images/course-21.png'
+import courseXXII from '../assets/images/course-22.png'
+import courseXXIII from '../assets/images/course-23.png'
+import articleI from '../assets/images/article-1.png'
+import articleII from '../assets/images/article-2.png'
+import articleIII from '../assets/images/article-3.png'
+import star from '../assets/images/kid_star.png'
+
+
 function Profile () {
   return(<>
     <section>
@@ -12,7 +30,7 @@ function Profile () {
               <div className="d-flex flex-column">
                 <div className="mb-7 mb-md-9">
                   <div className="d-flex align-items-center pb-7 pb-md-9">
-                    <img src="/assets/images/photo-1.png" alt="photo-1" className="photo-img me-2" />
+                    <img src={selfie} alt="photo-1" className="photo-img me-2" />
                     <div className="me-7">
                       <h5 className="mb-2">弟弟Brother</h5>
                       <h5>INTJ</h5>
@@ -23,7 +41,7 @@ function Profile () {
                 <div className="row">
                   <div className="col-md-6">
                     <div className="d-flex align-items-center mb-5">
-                      <span className="material-symbols-outlined icon-bg radius-8 me-5">award_star</span>
+                      <span className="material-icons icon-bg radius-8 me-5">star</span>
                       <div>
                         <p className="fs-7">積分等級</p>
                         <h6>Lv 4 求知者</h6>
@@ -32,7 +50,7 @@ function Profile () {
                   </div>
                   <div className="col-md-6">
                     <div className="d-flex align-items-center mb-5">
-                      <span className="material-symbols-outlined icon-bg radius-8 me-5">calendar_today</span>
+                      <span className="material-icons icon-bg radius-8 me-5">calendar_today</span>
                       <div>
                         <p className="fs-7">出生日期</p>
                         <h6>1989 / 9 / 26</h6>
@@ -50,7 +68,7 @@ function Profile () {
                   </div>
                   <div className="col-md-6">
                     <div className="d-flex align-items-center mb-5">
-                      <span className="material-symbols-outlined icon-bg radius-8 me-5">mail</span>
+                      <span className="material-icons icon-bg radius-8 me-5">mail</span>
                       <div>
                         <p className="fs-7">電子信箱</p>
                         <h6><a href="#mailto:example@example.com" className="text-gray-60">example@example.com</a></h6>
@@ -68,27 +86,27 @@ function Profile () {
             </div>
             <div className="col-xl-3">
               <div>
-                <img src="/assets/images/certificate.png" alt="certificate" className="w-100" />
+                <img src={certificate} alt="certificate" className="w-100" />
                 <div className="border-2px border-top-0 radius-bottom-8 certificate-h overflow-auto">
                   <div className="d-flex align-items-center py-3 px-5">
-                    <img src="/assets/images/course-12.png" alt="course-12" className="certificate-img border-2px radius-8 me-2" />
-                    <p className="text-nowrap fs-7"><span className="material-symbols-outlined text-success me-1 align-bottom">workspace_premium</span>西班牙語入門</p>
+                    <img src={courseXII} alt="course-12" className="certificate-img border-2px radius-8 me-2" />
+                    <p className="text-nowrap fs-7"><span className="material-icons text-success me-1 align-bottom">workspace_premium</span>西班牙語入門</p>
                   </div>
                   <div className="d-flex align-items-center py-3 px-5">
-                    <img src="/assets/images/course-13.png" alt="course-13" className="certificate-img border-2px radius-8 me-2" />
-                    <p className="text-nowrap fs-7"><span className="material-symbols-outlined text-success me-1 align-bottom">workspace_premium</span>設計思維與創新</p>
+                    <img src={courseXIII} alt="course-13" className="certificate-img border-2px radius-8 me-2" />
+                    <p className="text-nowrap fs-7"><span className="material-icons text-success me-1 align-bottom">workspace_premium</span>設計思維與創新</p>
                   </div>
                   <div className="d-flex align-items-center py-3 px-5">
-                    <img src="/assets/images/course-14.png" alt="course-14" className="certificate-img border-2px radius-8 me-2" />
-                    <p className="text-nowrap fs-7"><span className="material-symbols-outlined text-success me-1 align-bottom">workspace_premium</span>跨文化心理學</p>
+                    <img src={courseXIV} alt="course-14" className="certificate-img border-2px radius-8 me-2" />
+                    <p className="text-nowrap fs-7"><span className="material-icons text-success me-1 align-bottom">workspace_premium</span>跨文化心理學</p>
                   </div>
                   <div className="d-flex align-items-center py-3 px-5">
-                    <img src="/assets/images/course-15.png" alt="course-15" className="certificate-img border-2px radius-8 me-2" />
-                    <p className="text-nowrap fs-7"><span className="material-symbols-outlined text-success me-1 align-bottom">workspace_premium</span>認知心理學與行為</p>
+                    <img src={courseXV} alt="course-15" className="certificate-img border-2px radius-8 me-2" />
+                    <p className="text-nowrap fs-7"><span className="material-icons text-success me-1 align-bottom">workspace_premium</span>認知心理學與行為</p>
                   </div>
                   <div className="d-flex align-items-center py-3 px-5">
-                    <img src="/assets/images/course-16.png" alt="course-16" className="certificate-img border-2px radius-8 me-2" />
-                    <p className="text-nowrap fs-7"><span className="material-symbols-outlined text-success me-1 align-bottom">workspace_premium</span>韓語口語實踐</p>
+                    <img src={courseXVI} alt="course-16" className="certificate-img border-2px radius-8 me-2" />
+                    <p className="text-nowrap fs-7"><span className="material-icons text-success me-1 align-bottom">workspace_premium</span>韓語口語實踐</p>
                   </div>
                 </div>
               </div>
@@ -108,12 +126,12 @@ function Profile () {
                 <div className="row g-7 g-lg-9">
                   <div className="col-lg-4">
                     <div className="card border-0 bg-white p-7 h-100">
-                      <img src="/assets/images/course-21.png" alt="course-21" className="border-2px radius-8 mb-5" />
+                      <img src={courseXXI} alt="course-21" className="border-2px radius-8 mb-5" />
                       <h4 className="mb-2"><a href="#" className="stretched-link text-gray-60">零基礎的手機攝影術，瞬間拍出專業的風景照</a></h4>
                       <p className="fs-7 text-gray-60 mb-5">講師－高宇琛</p>
                       <div className="d-flex align-items-center mt-auto">
-                        <div className="progress bg-green-light w-100 me-2" style="height:12px">
-                          <div className="progress-bar bg-success" role="progressbar" style="width: 50%"></div>
+                        <div className="progress bg-green-light w-100 me-2" style={{height:"12px"}}>
+                          <div className="progress-bar bg-success" role="progressbar" style={{width:"50%"}}></div>
                         </div>
                         <p className="text-success fs-7">50%</p>
                       </div>
@@ -121,12 +139,12 @@ function Profile () {
                   </div>
                   <div className="col-lg-4">
                     <div className="card border-0 bg-white p-7 h-100">
-                      <img src="/assets/images/course-22.png" alt="course-22" className="border-2px radius-8 mb-5" />
+                      <img src={courseXXII} alt="course-22" className="border-2px radius-8 mb-5" />
                       <h4 className="mb-2 "><a href="#" className="stretched-link text-gray-60">寵物生活照實戰:快門、光圈、ISO之間的取捨...</a></h4>
                       <p className="fs-7 text-gray-60 mb-5">講師－高宇琛</p>
                       <div className="d-flex align-items-center mt-auto">
-                        <div className="progress bg-green-light w-100 me-2" style="height:12px">
-                          <div className="progress-bar bg-success" role="progressbar" style="width: 50%"></div>
+                        <div className="progress bg-green-light w-100 me-2" style={{height:"12px"}}>
+                          <div className="progress-bar bg-success" role="progressbar" style={{width:"50%"}}></div>
                         </div>
                         <p className="text-success fs-7">50%</p>
                       </div>
@@ -134,12 +152,12 @@ function Profile () {
                   </div>
                   <div className="col-lg-4">
                     <div className="card border-0 bg-white p-7 h-100">
-                      <img src="/assets/images/course-23.png" alt="course-23" className="border-2px radius-8 mb-5" />
+                      <img src={courseXXIII} alt="course-23" className="border-2px radius-8 mb-5" />
                       <h4 className="mb-2"><a href="#" className="stretched-link text-gray-60">不用動腦的攝影課-7堂課拍出有質感的照片</a></h4>
                       <p className="fs-7 text-gray-60 mb-5">講師－高宇琛</p>
                       <div className="d-flex align-items-center mt-auto">
-                        <div className="progress bg-green-light w-100 me-2" style="height:12px">
-                          <div className="progress-bar bg-success" role="progressbar" style="width: 50%"></div>
+                        <div className="progress bg-green-light w-100 me-2" style={{height:"12px"}}>
+                          <div className="progress-bar bg-success" role="progressbar" style={{width:"50%"}}></div>
                         </div>
                         <p className="text-success fs-7">50%</p>
                       </div>
@@ -157,12 +175,12 @@ function Profile () {
                   <div className="col-lg-4">
                     <div className="card border-0 radius-32">
                       <div className="card-header border-0 position-relative bg-white pt-7 px-7 radius-32">
-                        <img src="/assets/images/course-12.png" alt="course-12" className="card-img" />
+                        <img src={courseXII} alt="course-12" className="card-img" />
                         <form action="#" className="card-icon-position">
                           <input type="checkbox" id="collect" className="collect-ctrl d-none" />
-                          <label for="collect" className="collect-bookmark cursor card-icon-bg me-2"><i className="bi bi-bookmark fs-5"></i></label>
-                          <label for="collect" className="collect-bookmark-fill cursor card-icon-bg me-2"><i className="bi bi-bookmark-fill fs-5"></i></label>
-                          <label for="cart" className="card-icon-bg cursor"><i className="bi bi-cart fs-5"></i></label>
+                          <label htmlFor="collect" className="collect-bookmark cursor card-icon-bg me-2"><i className="bi bi-bookmark fs-5"></i></label>
+                          <label htmlFor="collect" className="collect-bookmark-fill cursor card-icon-bg me-2"><i className="bi bi-bookmark-fill fs-5"></i></label>
+                          <label htmlFor="cart" className="card-icon-bg cursor"><i className="bi bi-cart fs-5"></i></label>
                         </form>
                       </div>
                       <div className="card-body border-0 border-bottom-black px-0 mx-7">
@@ -180,7 +198,7 @@ function Profile () {
                         <div className="d-flex justify-content-between">
                           <h4>NT 899</h4>
                           <div className="d-flex justify-content-between align-items-center">
-                            <img src="/assets/images/kid_star.png" alt="star" />
+                            <img src={star} alt="star" />
                             <p className="text-nowrap text-success">4.9 (858)</p>
                           </div>
                         </div>
@@ -190,12 +208,12 @@ function Profile () {
                   <div className="col-lg-4">
                     <div className="card border-0 radius-32">
                       <div className="card-header border-0 position-relative bg-white pt-7 px-7 radius-32">
-                        <img src="/assets/images/course-13.png" alt="course-13" className="card-img" />
+                        <img src={courseXIII} alt="course-13" className="card-img" />
                         <form action="#" className="card-icon-position">
                           <input type="checkbox" id="collect" className="collect-ctrl d-none" />
-                          <label for="collect" className="collect-bookmark cursor card-icon-bg me-2"><i className="bi bi-bookmark fs-5"></i></label>
-                          <label for="collect" className="collect-bookmark-fill cursor card-icon-bg me-2"><i className="bi bi-bookmark-fill fs-5"></i></label>
-                          <label for="cart" className="card-icon-bg cursor"><i className="bi bi-cart fs-5"></i></label>
+                          <label htmlFor="collect" className="collect-bookmark cursor card-icon-bg me-2"><i className="bi bi-bookmark fs-5"></i></label>
+                          <label htmlFor="collect" className="collect-bookmark-fill cursor card-icon-bg me-2"><i className="bi bi-bookmark-fill fs-5"></i></label>
+                          <label htmlFor="cart" className="card-icon-bg cursor"><i className="bi bi-cart fs-5"></i></label>
                         </form>
                       </div>
                       <div className="card-body border-0 border-bottom-black px-0 mx-7">
@@ -213,7 +231,7 @@ function Profile () {
                         <div className="d-flex justify-content-between">
                           <h4 className="text-nowrap">NT 1,199</h4>
                           <div className="d-flex justify-content-between align-items-center">
-                            <img src="/assets/images/kid_star.png" alt="star" />
+                            <img src={star} alt="star" />
                             <p className="text-nowrap text-success">4.3 (1,031)</p>
                           </div>
                         </div>
@@ -223,12 +241,12 @@ function Profile () {
                   <div className="col-lg-4">
                     <div className="card border-0 radius-32">
                       <div className="card-header border-0 position-relative bg-white pt-7 px-7 radius-32">
-                        <img src="/assets/images/course-14.png" alt="course-14" className="card-img" />
+                        <img src={courseXIV} alt="course-14" className="card-img" />
                         <form action="#" className="card-icon-position">
                           <input type="checkbox" id="collect" className="collect-ctrl d-none" />
-                          <label for="collect" className="collect-bookmark cursor card-icon-bg me-2"><i className="bi bi-bookmark fs-5"></i></label>
-                          <label for="collect" className="collect-bookmark-fill cursor card-icon-bg me-2"><i className="bi bi-bookmark-fill fs-5"></i></label>
-                          <label for="cart" className="card-icon-bg cursor"><i className="bi bi-cart fs-5"></i></label>
+                          <label htmlFor="collect" className="collect-bookmark cursor card-icon-bg me-2"><i className="bi bi-bookmark fs-5"></i></label>
+                          <label htmlFor="collect" className="collect-bookmark-fill cursor card-icon-bg me-2"><i className="bi bi-bookmark-fill fs-5"></i></label>
+                          <label htmlFor="cart" className="card-icon-bg cursor"><i className="bi bi-cart fs-5"></i></label>
                         </form>
                       </div>
                       <div className="card-body border-0 border-bottom-black px-0 mx-7">
@@ -246,7 +264,7 @@ function Profile () {
                         <div className="d-flex justify-content-between">
                           <h4>NT 899</h4>
                           <div className="d-flex justify-content-between align-items-center">
-                            <img src="/assets/images/kid_star.png" alt="star" />
+                            <img src={star} alt="star" />
                             <p className="text-nowrap text-success">4.7 (858)</p>
                           </div>
                         </div>
@@ -280,11 +298,11 @@ function Profile () {
                     <div className="card border-0 bg-white radius-32 p-7 mb-7">
                       <div className="d-flex flex-column flex-lg-row">
                         <div className="position-relative me-lg-7">
-                          <img src="/assets/images/article-1.png" alt="article-1" className="card-img" />
+                          <img src={articleI} alt="article-1" className="card-img" />
                           <form action="#" className="card-articleicon-position">
                             <input type="checkbox" id="collect-article-1" className="collect-ctrl d-none" />
-                            <label for="collect-article-1" className="collect-bookmark-fill cursor card-icon-bg"><i className="bi bi-bookmark fs-5"></i></label>
-                            <label for="collect-article-1" className="collect-bookmark cursor card-icon-bg"><i className="bi bi-bookmark-fill fs-5"></i></label>
+                            <label htmlFor="collect-article-1" className="collect-bookmark-fill cursor card-icon-bg"><i className="bi bi-bookmark fs-5"></i></label>
+                            <label htmlFor="collect-article-1" className="collect-bookmark cursor card-icon-bg"><i className="bi bi-bookmark-fill fs-5"></i></label>
                           </form>
                         </div>
                         <div>
@@ -305,11 +323,11 @@ function Profile () {
                     <div className="card border-0 bg-white radius-32 p-7 mb-7">
                       <div className="d-flex flex-column flex-lg-row">
                         <div className="position-relative me-lg-7">
-                          <img src="/assets/images/article-2.png" alt="article-2" className="card-img" />
+                          <img src={articleII} alt="article-2" className="card-img" />
                           <form action="#" className="card-articleicon-position">
                             <input type="checkbox" id="collect-article-2" className="collect-ctrl d-none" />
-                            <label for="collect-article-2" className="collect-bookmark-fill cursor card-icon-bg"><i className="bi bi-bookmark fs-5"></i></label>
-                            <label for="collect-article-2" className="collect-bookmark cursor card-icon-bg"><i className="bi bi-bookmark-fill fs-5"></i></label>
+                            <label htmlFor="collect-article-2" className="collect-bookmark-fill cursor card-icon-bg"><i className="bi bi-bookmark fs-5"></i></label>
+                            <label htmlFor="collect-article-2" className="collect-bookmark cursor card-icon-bg"><i className="bi bi-bookmark-fill fs-5"></i></label>
                           </form>
                         </div>
                         <div>
@@ -331,11 +349,11 @@ function Profile () {
                     <div className="card border-0 bg-white radius-32 p-7">
                       <div className="d-flex flex-column flex-lg-row">
                         <div className="position-relative me-lg-7">
-                          <img src="/assets/images/article-3.png" alt="article-3" className="card-img" />
+                          <img src={articleIII} alt="article-3" className="card-img" />
                           <form action="#" className="card-articleicon-position">
                             <input type="checkbox" id="collect-article-3" className="collect-ctrl d-none" />
-                            <label for="collect-article-3" className="collect-bookmark-fill cursor card-icon-bg"><i className="bi bi-bookmark fs-5"></i></label>
-                            <label for="collect-article-3" className="collect-bookmark cursor card-icon-bg"><i className="bi bi-bookmark-fill fs-5"></i></label>
+                            <label htmlFor="collect-article-3" className="collect-bookmark-fill cursor card-icon-bg"><i className="bi bi-bookmark fs-5"></i></label>
+                            <label htmlFor="collect-article-3" className="collect-bookmark cursor card-icon-bg"><i className="bi bi-bookmark-fill fs-5"></i></label>
                           </form>
                         </div>
                         <div className="">

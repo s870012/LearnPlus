@@ -8,7 +8,7 @@ function Header () {
     <nav className="navbar navbar-expand-xxxl nav-border nav-position bg-white rounded-bottom-3 py-0 nav-width zindex-1000">
       <div className="d-flex flex-column w-100">
           <div className="d-flex justify-content-between">
-              <h1 className="mx-xxxl-auto pt-xxxl-11 pb-xxxl-6"><a className="navbar-brand m-0" href="index.html"><img src={Logo} alt="logo" className="logo"/></a></h1>
+              <h1 className="mx-xxxl-auto pt-xxxl-11 pb-xxxl-6"><NavLink className="navbar-brand m-0" href="index.html"><img src={Logo} alt="logo" className="logo"/></NavLink></h1>
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
                   <span className="navbar-toggler-icon"></span>
               </button>
@@ -23,7 +23,7 @@ function Header () {
                   </li>
                   <li className="nav-item"><a className="nav-link active text-gray-60 pt-6"  href="#">精選文章</a></li>
                   <li className="nav-item"><a className="nav-link text-gray-60" href="mainCourse.html">課程專區</a></li>
-                  <NavLink to="/profile" className="nav-item"><a className="nav-link text-gray-60" href="#">我的課程</a></NavLink>
+                  <NavLink to="/profile" className="nav-item nav-link text-gray-60">我的課程</NavLink>
                   <li className="nav-item"><a className="nav-link text-gray-60" href="aboutUs.html">關於我們</a></li>
                   <li><a href="#"><img src={singIn} alt="sign in" className="clockIN pt-2 pb-6"/></a></li>
                   <li className="signIN d-flex align-items-center">
