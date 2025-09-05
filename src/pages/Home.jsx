@@ -206,7 +206,7 @@ function Home() {
     </section>
     {/* teacher */}
     <section>
-      <div className="container container-fuild">
+      <div className="container container-fluid">
         <div className="row">
           <div className="col-md-10 mx-sm-auto">
             <div className="mac-border">
@@ -281,29 +281,51 @@ function Home() {
               <Swiper
                 className="py-9"
                 modules={Grid}
-                slidesPerView={3}
+                slidesPerView={1}
                 grid={{
-                  rows: 2,
-                  fill:"row"
+                  rows: 1,
                 }}
                 spaceBetween={16}
                 breakpoints={{
-                  375:{
-                    slidesPerView:1
+                  375: {      
+                    grid: {
+                      fill:"row",
+                      rows: 1,
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 24,
                   },
-                  768:{
-                    slidesPerView:2,
+                  767: {      
+                    grid: {
+                      fill:"row",
+                      rows: 1,
+                    },
+                    slidesPerView: 1.5,
+                    spaceBetween: 24,
                   },
-                  1200:{
-                    slidesPerView:3,
+                  992: {   
+                    grid: {
+                      fill:"row",
+                      rows: 1,
+                    },   
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                  },
+                  1200: {   
+                    grid: {
+                      fill:"row",
+                      rows: 1,
+                    },   
+                    slidesPerView: 3,
+                    spaceBetween: 24,
                   }
                 }}
               >
                 {courses.map((course) => {
                   return(
-                    <SwiperSlide className="teacher-box mb-5" key={course.id}>
-                      <div className="card border-0 position-relative radius-32">
-                        <img src={course.discount} alt="Discount-88" className="dis-position dis-width"/>
+                    <SwiperSlide key={course.id}>
+                      <div className="card border-0 position-relative radius-32 mb-5">
+                        {/* <img src={course.discount} alt="Discount-88" className="dis-position dis-width"/> */}
                         <div className="card-header border-0 position-relative bg-white pt-7 px-7 radius-32">
                           <img src={course.image} alt="course-1" className="card-img"/>
                           <form action="#" className="card-icon-position">

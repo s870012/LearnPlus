@@ -154,14 +154,15 @@
   background-color: $white;
   border-top-right-radius: 16px;
 }
-.teacher-box{
-  width: 240px;
-}
-@include sm{
-  .teacher-box{
-    width: 300px;
-  }
-}
+// width
+// .w-336{
+//   max-width: 25%;
+// }
+// @include xxl{
+//   .w-336{
+//     max-width: 31%;
+//   }
+// }
 .mbti-type{
   padding: 8px 16px;
   background-color: $white;
