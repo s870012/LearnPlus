@@ -24,6 +24,8 @@ import mbtiImageSm from '../assets/images/mbti-image-sm.png'
 import faq from '../assets/images/FAQ.png'
 import star from '../assets/images/kid_star.png'
 
+import { useRef } from 'react';
+
 function Home() {
   const teachers = [
     {
@@ -143,6 +145,37 @@ function Home() {
     },
   ]
 
+  // teacher swiper
+  const swiperTeacherRef = useRef(null);
+
+  const handleTeacherPrev = () => {
+    if (swiperTeacherRef.current.isBeginning) {
+      swiperTeacherRef.current.slideTo(swiperTeacherRef.current.slides.length - 1);
+    } else {
+      swiperTeacherRef.current.slidePrev();
+    }
+  }
+
+  const handleTeacherNext = () => {
+    if (swiperTeacherRef.current.isEnd) {
+      swiperTeacherRef.current.slideTo(0);
+    } else {
+      swiperTeacherRef.current.slideNext();
+    }
+  }
+
+
+  // course swiper
+  const swiperCourseRef = useRef(null);
+
+  const handleCourseNext = () => {
+    if (swiperCourseRef.current.isEnd) {
+      swiperCourseRef.current.slideTo(0);
+    } else {
+      swiperCourseRef.current.slideNext();
+    }
+  }
+
   return(<>
     {/* banner */}
     <section className="banner-bg">
@@ -220,12 +253,15 @@ function Home() {
                   <h5 className="fs-md-4">名師課程</h5>
                 </div>
                 <div className="d-none d-md-block">
-                  <span className="swiper-prev swiper-btn"><i className="bi bi-arrow-left-short arrow-left align-middle fs-2"></i></span>
-                  <span className="swiper-next swiper-btn"><i className="bi bi-arrow-right-short arrow-right align-middle fs-2"></i></span>
+                  <span onClick={handleTeacherPrev} className="swiper-btn cursor"><i className="bi bi-arrow-left-short arrow-left align-middle fs-2"></i></span>
+                  <span onClick={handleTeacherNext} className="swiper-btn cursor"><i className="bi bi-arrow-right-short arrow-right align-middle fs-2"></i></span>
                 </div>
               </div>
               <Swiper
                 className="py-7 p-md-6"
+                onSwiper={(swiper) => {
+                  swiperTeacherRef.current = swiper
+                }}
                 slidesPerView={3}
                 spaceBetween={24}
                 breakpoints={{
@@ -268,7 +304,7 @@ function Home() {
             <div className="course-radius course-head-bg">
               <div className="position-relative py-5 py-md-8">
                 <h3 className="text-center">為您推薦</h3>
-                <i className="bi bi-arrow-right-short position-absolute top-0 end-0 fs-2 text-gray-80 px-2 px-md-6 py-md-3 swiper-next-btn swiper-btn swiper-radius opacity-75 d-block"></i>
+                <i onClick={handleCourseNext} className="bi bi-arrow-right-short position-absolute top-0 end-0 fs-2 text-gray-80 px-2 px-md-6 py-md-3 swiper-next-btn swiper-btn swiper-radius opacity-75 d-block cursor"></i>
               </div>
             </div>
           </div>
@@ -280,6 +316,9 @@ function Home() {
             <div className="col-md-10 mx-md-auto">
               <Swiper
                 className="py-9"
+                onSwiper={(swiper) => {
+                swiperCourseRef.current = swiper
+              }}
                 modules={Grid}
                 slidesPerView={1}
                 grid={{

@@ -53,8 +53,7 @@
     background-color: $white;
 }
 .swiper-btn:hover{
-    color: $white;
-    background-color: $gray-40;
+    color: $primary-dark;
 }
 .btn-l{
     border-bottom-left-radius: 16px;
@@ -202,4 +201,13 @@
     position: absolute;
     top: 65%;
     left: 30%;
+}
+
+// hover
+.hover:hover{
+    background-color: $primary-dark;
+}
+
+.active:active {
+    color: $primary;
 }

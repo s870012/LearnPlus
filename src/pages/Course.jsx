@@ -245,11 +245,11 @@ function Course() {
               <ul className="list-group rounded-top-0" style={{maxHeight:'700px', overflowY:'scroll'}}>
                 {lessons.map((lesson, index) => {
                   return(
-                    <li className="list-group-item p-5" key={index}>
+                    <li className="list-group-item p-5 hover" key={index}>
                       <div className="d-flex justify-content-between align-items-center">
                         <div>
                           <p className="fs-7">{lesson.lesson}</p>
-                          <p className="fs-5 mt-2 fw-bold">{lesson.title}</p>
+                          <a href="#" className="fs-5 mt-2 text-dark fw-bold stretched-link">{lesson.title}</a>
                         </div>
                         <div className="align-middle">
                           <span className="material-icons text-success">done_outline</span>
