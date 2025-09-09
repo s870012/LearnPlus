@@ -28,7 +28,7 @@ function Header () {
     // 登入
     const [isLogin, setIsLogin] = useState(false)
     const handleLogin = (e) => {
-        e.preventDefault
+        e.preventDefault()
         setIsLogin(true)
     }
 
