@@ -269,6 +269,9 @@ function Home() {
                     slidesPerView:1
                   },
                   576:{
+                    slidesPerView:2
+                  },
+                  768:{
                     slidesPerView:3
                   },
                 }}
@@ -279,12 +282,12 @@ function Home() {
                       <div>
                         <div className="position-relative mb-5">
                           <h4 className="position-absolute text-success rotate mbti-type mbti-p">{teacher.mbti}</h4>
-                          <img src={teacher.image} alt="teacher-1" className="teacher-image" />
+                          <img src={teacher.image} alt="teacher-1" className="teacher-image d-block mx-auto" />
                         </div>
                         <div className="d-flex flex-column jutify-content-center px-5">
                           <h5 className="text-center mb-2">{teacher.name}</h5>
                           <p className="text-center mb-5">{teacher.title}</p>
-                          <a href="#" className="btn btn-outline-primary-dark border-2 text-nowrap">{teacher.course} <i className="bi bi-arrow-right"></i></a>
+                          <a href="#" className="btn btn-outline-primary-dark border-2 text-nowrap fs-lg-6 fs-7">{teacher.course} <i className="bi bi-arrow-right"></i></a>
                         </div>
                       </div>
                     </SwiperSlide>
