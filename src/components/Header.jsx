@@ -71,11 +71,11 @@ function Header () {
                     })}
                     <li><a href="#" onClick={(e) => handleSignIn(e)}><img src={`${isSignIn ? singInDone : signIn}`} alt="sign in" className="clockIN pt-2 pb-6"/></a></li>
                     {isLogin ?
-                    (<div class="navbar-nav text-center fw-medium w-100">
-                        <a onClick="event.preventDefault()" href="#" className="btn btn-primary text-nowrap rounded-0 radius-bottom-l border-end-dark btn-border-top nav-btn-hover nav-hover fw-medium w-100"><i className="bi bi-cart-fill"></i>購物車</a>
+                    (<div className="navbar-nav text-center fw-medium w-100 position-relative">
+                        <a href="#" className="btn btn-primary text-nowrap rounded-0 radius-bottom-l border-end-dark btn-border-top nav-btn-hover nav-hover fw-medium w-100"><i className="bi bi-cart-fill"></i>購物車</a>
                         <div className="btn-group dropup">
-                            <a onClick="event.preventDefault()" href="#" className="btn btn-primary dropdown-up text-nowrap rounded-0 radius-bottom-r btn-border-top nav-btn-hover fw-medium" data-bs-toggle="dropdown"><i className="bi bi-person-fill"></i>帳戶</a>
-                            <ul className="dropdown-menu dropdown-menu-end me-3 mb-3 p-3 border-2px">
+                            <a href="#" className="btn btn-primary dropdown-up text-nowrap rounded-0 radius-bottom-r btn-border-top nav-btn-hover fw-medium" data-bs-toggle="dropdown"><i className="bi bi-person-fill"></i>帳戶</a>
+                            <ul className="dropdown-menu dropdown-menu-end mb-xxxl-3 me-xxxl-3 p-3 sec-navbar position-absolute w-100">
                                 <li className="py-2 px-5"><a href="" className="text-gray-60 li-hover"><i className="bi bi-person-circle"></i> 個人資料</a></li>
                                 <li className="py-2 px-5"><a href="" className="text-gray-60 li-hover"><i className="bi bi-star"></i> 積分紀錄</a></li>
                                 <li className="py-2 px-5"><a href="" className="text-gray-60 li-hover"><i className="bi bi-bell"></i> 訊息通知</a></li>

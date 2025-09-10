@@ -61,3 +61,13 @@
     color: $primary-dark;
   }
 }
+
+.sec-navbar{
+  border-radius: 0;
+  border: 2px solid $gray-80;
+}
+@include xxxl{
+  .sec-navbar{
+    border-radius: 8px;
+  }
+}
