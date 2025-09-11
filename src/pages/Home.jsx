@@ -198,7 +198,7 @@ function Home() {
                 <div className="d-flex flex-column h-100">
                   <div className="my-auto">
                     <h3 className="mb-2 mb-lg-5 fs-lg-1">學識伴</h3>
-                    <a href="#index.html"><img src={logoText} alt="logo-text" className="d-block mb-5 mb-lg-7 plus" /></a>
+                    <img src={logoText} alt="logo-text" className="d-block mb-5 mb-lg-7 plus" />
                     <p className="fs-lg-3 mb-5">本平台支持不同MBTI人群共同線上學習，促進多樣性交流，增強合作效能，並提供個性化的學習體驗以滿足不同需求。</p>
                   </div>
                 </div>
@@ -287,7 +287,7 @@ function Home() {
                         <div className="d-flex flex-column jutify-content-center px-5">
                           <h5 className="text-center mb-2">{teacher.name}</h5>
                           <p className="text-center mb-5">{teacher.title}</p>
-                          <a href="#" className="btn btn-outline-primary-dark border-2 text-nowrap fs-lg-6 fs-7">{teacher.course} <i className="bi bi-arrow-right"></i></a>
+                          <button type="button" className="btn btn-outline-primary-dark border-2 text-nowrap fs-lg-6 fs-7">{teacher.course} <i className="bi bi-arrow-right"></i></button>
                         </div>
                       </div>
                     </SwiperSlide>

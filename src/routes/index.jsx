@@ -3,6 +3,7 @@ import Home from "../pages/Home"
 import Profile from "../pages/Profile"
 import Course from "../pages/Course"
 import About from "../pages/About"
+import NotFound from "../pages/NotFound"
 
 const routes = [
   {
@@ -26,6 +27,10 @@ const routes = [
         element: <About/>
       }
     ]
+  },
+  {
+    path:'*',
+    element: <NotFound/>
   }
 ]
 

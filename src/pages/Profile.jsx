@@ -17,6 +17,10 @@ import star from '../assets/images/kid_star.png'
 
 
 function Profile () {
+  const cancelDefault = (e) => {
+    e.preventDefault()
+  }
+
   return(<>
     <section>
       <div className="py-8"></div>
@@ -88,23 +92,23 @@ function Profile () {
               <div>
                 <img src={certificate} alt="certificate" className="w-100" />
                 <div className="border-2px border-top-0 radius-bottom-8 certificate-h overflow-auto">
-                  <div className="d-flex align-items-center py-3 px-5">
+                  <div className="d-flex align-items-center py-3 px-5 hover cursor">
                     <img src={courseXII} alt="course-12" className="certificate-img border-2px radius-8 me-2" />
                     <p className="text-nowrap fs-7"><span className="material-icons text-success me-1 align-bottom">workspace_premium</span>西班牙語入門</p>
                   </div>
-                  <div className="d-flex align-items-center py-3 px-5">
+                  <div className="d-flex align-items-center py-3 px-5 hover cursor">
                     <img src={courseXIII} alt="course-13" className="certificate-img border-2px radius-8 me-2" />
                     <p className="text-nowrap fs-7"><span className="material-icons text-success me-1 align-bottom">workspace_premium</span>設計思維與創新</p>
                   </div>
-                  <div className="d-flex align-items-center py-3 px-5">
+                  <div className="d-flex align-items-center py-3 px-5 hover cursor">
                     <img src={courseXIV} alt="course-14" className="certificate-img border-2px radius-8 me-2" />
                     <p className="text-nowrap fs-7"><span className="material-icons text-success me-1 align-bottom">workspace_premium</span>跨文化心理學</p>
                   </div>
-                  <div className="d-flex align-items-center py-3 px-5">
+                  <div className="d-flex align-items-center py-3 px-5 hover cursor">
                     <img src={courseXV} alt="course-15" className="certificate-img border-2px radius-8 me-2" />
                     <p className="text-nowrap fs-7"><span className="material-icons text-success me-1 align-bottom">workspace_premium</span>認知心理學與行為</p>
                   </div>
-                  <div className="d-flex align-items-center py-3 px-5">
+                  <div className="d-flex align-items-center py-3 px-5 hover cursor">
                     <img src={courseXVI} alt="course-16" className="certificate-img border-2px radius-8 me-2" />
                     <p className="text-nowrap fs-7"><span className="material-icons text-success me-1 align-bottom">workspace_premium</span>韓語口語實踐</p>
                   </div>
@@ -127,7 +131,7 @@ function Profile () {
                   <div className="col-lg-4">
                     <div className="card border-0 bg-white p-7 h-100">
                       <img src={courseXXI} alt="course-21" className="border-2px radius-8 mb-5" />
-                      <h4 className="mb-2"><a href="#" className="stretched-link text-gray-60">零基礎的手機攝影術，瞬間拍出專業的風景照</a></h4>
+                      <h4 className="mb-2"><a onClick={(e) => cancelDefault(e)} href="#" className="stretched-link text-gray-60">零基礎的手機攝影術，瞬間拍出專業的風景照</a></h4>
                       <p className="fs-7 text-gray-60 mb-5">講師－高宇琛</p>
                       <div className="d-flex align-items-center mt-auto">
                         <div className="progress bg-green-light w-100 me-2" style={{height:"12px"}}>
@@ -140,7 +144,7 @@ function Profile () {
                   <div className="col-lg-4">
                     <div className="card border-0 bg-white p-7 h-100">
                       <img src={courseXXII} alt="course-22" className="border-2px radius-8 mb-5" />
-                      <h4 className="mb-2 "><a href="#" className="stretched-link text-gray-60">寵物生活照實戰:快門、光圈、ISO之間的取捨...</a></h4>
+                      <h4 className="mb-2 "><a onClick={(e) => cancelDefault(e)} href="#" className="stretched-link text-gray-60">寵物生活照實戰:快門、光圈、ISO之間的取捨...</a></h4>
                       <p className="fs-7 text-gray-60 mb-5">講師－高宇琛</p>
                       <div className="d-flex align-items-center mt-auto">
                         <div className="progress bg-green-light w-100 me-2" style={{height:"12px"}}>
@@ -153,7 +157,7 @@ function Profile () {
                   <div className="col-lg-4">
                     <div className="card border-0 bg-white p-7 h-100">
                       <img src={courseXXIII} alt="course-23" className="border-2px radius-8 mb-5" />
-                      <h4 className="mb-2"><a href="#" className="stretched-link text-gray-60">不用動腦的攝影課-7堂課拍出有質感的照片</a></h4>
+                      <h4 className="mb-2"><a onClick={(e) => cancelDefault(e)} href="#" className="stretched-link text-gray-60">不用動腦的攝影課-7堂課拍出有質感的照片</a></h4>
                       <p className="fs-7 text-gray-60 mb-5">講師－高宇琛</p>
                       <div className="d-flex align-items-center mt-auto">
                         <div className="progress bg-green-light w-100 me-2" style={{height:"12px"}}>
@@ -188,7 +192,7 @@ function Profile () {
                           <p className="tag-pill bg-gray-40 me-2 text-nowrap">語言與文學</p>
                           <p className="tag-pill bg-purple text-nowrap">直播課程</p>
                         </div>
-                        <h4 className="mb-2 mt-5"><a href="#" className="text-gray-80">西班牙語入門</a></h4>
+                        <h4 className="mb-2 mt-5"><a onClick={(e) => cancelDefault(e)} href="#" className="text-gray-80">西班牙語入門</a></h4>
                         <div className="d-flex">
                           <p className="me-4">講師－高宇琛</p>
                           <p className="text-primary">ESTP</p>
@@ -221,7 +225,7 @@ function Profile () {
                           <p className="tag-pill bg-gray-40 me-2 text-nowrap">語言與文學</p>
                           <p className="tag-pill bg-purple text-nowrap">錄製課程</p>
                         </div>
-                        <h4 className="mb-2 mt-5"><a href="#" className="text-gray-80 stretched-link">設計思維與創新</a></h4>
+                        <h4 className="mb-2 mt-5"><a onClick={(e) => cancelDefault(e)} href="#" className="text-gray-80 stretched-link">設計思維與創新</a></h4>
                         <div className="d-flex">
                           <p className="me-4">講師－張昕玟</p>
                           <p className="text-primary">ISFJ</p>
@@ -254,7 +258,7 @@ function Profile () {
                           <p className="tag-pill bg-gray-40 me-2 text-nowrap">語言與文學</p>
                           <p className="tag-pill bg-purple text-nowrap">錄製課程</p>
                         </div>
-                        <h4 className="mb-2 mt-5"><a href="#" className="text-gray-80 stretched-link">跨文化心理學</a></h4>
+                        <h4 className="mb-2 mt-5"><a onClick={(e) => cancelDefault(e)} href="#" className="text-gray-80 stretched-link">跨文化心理學</a></h4>
                         <div className="d-flex">
                           <p className="me-4">講師－薛詩涵</p>
                           <p className="text-primary">INFP</p>

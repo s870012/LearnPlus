@@ -15,9 +15,9 @@ function Footer() {
                     <div className="me-lg-15 text-center">
                         <NavLink to="/"><img src={logo} alt="logo" className="logo-text mb-2"/></NavLink>
                         <div className="d-flex justify-content-center">
-                            <a href=""><img src={ig} alt="ig" className="text-success"/></a>
-                            <a href=""><img src={fb} alt="facebook"/></a>
-                            <a href=""><img src={youtube} alt="youtube"/></a>
+                            <a href="https://www.instagram" target="_blank"><img src={ig} alt="ig" className="text-success"/></a>
+                            <a href="https://www.facebook.com" target="_blank"><img src={fb} alt="facebook"/></a>
+                            <a href="https://www.youtube.com" target="_blank"><img src={youtube} alt="youtube"/></a>
                         </div>
                     </div>
                     <div className="d-flex flex-column text-center text-lg-start">
@@ -36,7 +36,7 @@ function Footer() {
         <div className="copyright-bg">
             <div className="container">
                 <div className="d-flex flex-column-reverse flex-lg-row justify-content-between align-items-center py-3 py-lg-7">
-                    <div className="text-gray-40 pt-3 pt-lg-0 fs-7">@2024 學識伴 LearnPlus++</div>
+                    <div className="text-gray-40 pt-3 pt-lg-0 fs-7">@2024 學識伴 LearnPlus++<br/>此為練習網站，無任何商業行為</div>
                     <ul className="d-flex align-items-center list-unstyled fw-medium">
                         <li className="me-7"><a href="#" className="text-gray-40">私隱政策聲明</a></li>
                         <li className="me-7"><a href="#" className="text-gray-40">網站使用條款</a></li>

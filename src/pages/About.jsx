@@ -6,6 +6,10 @@ import courseVIII from '../assets/images/course-8.png'
 import courseXXIII from '../assets/images/course-23.png'
 
 function About() {
+  const cancelDefault = (e) => {
+    e.preventDefault()
+  }
+
   return(<>
     {/* 品牌LOGO */}
     <div className="container py-11">
@@ -24,7 +28,7 @@ function About() {
               <h2 className="card-title fw-bold mt-4">探索屬於你的個性化學習之旅</h2>
               <p className="card-text mt-3">在LearnPlus，我們致力於打造多元且創新的學習平台，為用戶提供廣泛的學習主題與豐富的課程資源。無論您是想要提升職業技能，探索個人興趣，同時尋找志同道合的學習夥伴，如同我們品牌LOGO象徵師生與夥伴互相牽起的雙手，滿足您的學習興趣與需求。</p>
               <div className="mt-5 d-flex justify-content-end">
-                <a href="#" className="btn btn-primary">瞭解更多品牌核心價值</a>
+                <button type="button" className="btn btn-primary">瞭解更多品牌核心價值</button>
               </div>
             </div>    
           </div>
@@ -56,19 +60,19 @@ function About() {
               <div className="col-lg-4">
                 <div className="card border-0 bg-white p-7">
                   <img src={courseXVII} alt="course-21" className="border-1px mb-5 object-fit-cover" />
-                  <h3 className="mt-3"><a href="#" className="text-black">馬上開始學習</a></h3>
+                  <h3 className="mt-3"><a onClick={(e) => cancelDefault(e)} href="#" className="text-black stretched-link">馬上開始學習</a></h3>
                 </div>
               </div>
               <div className="col-lg-4">
                 <div className="card border-0 bg-white p-7">
                   <img src={courseXXIII} alt="course-22" className="border-1px mb-5 object-fit-cover" />
-                  <h3 className="mt-3"><a href="#" className="text-black">上架您的才華</a></h3>
+                  <h3 className="mt-3"><a onClick={(e) => cancelDefault(e)}href="#" className="text-black stretched-link">上架您的才華</a></h3>
                 </div>
               </div>
               <div className="col-lg-4">
                 <div className="card border-0 bg-white p-7">
                   <img src={courseVIII} alt="course-23" className="border-1px mb-5 object-fit-cover" />
-                  <h3 className="mt-3"><a href="#" className="text-black">企業申請試用</a></h3>
+                  <h3 className="mt-3"><a onClick={(e) => cancelDefault(e)} href="#" className="text-black stretched-link">企業申請試用</a></h3>
                 </div>
               </div>    
             </div>  
@@ -87,7 +91,7 @@ function About() {
                 <div className="card border-0 bg-white p-7">
                   <img src={propVIII} alt="course-21" className="border-1px mb-5" />
                   <div className=" border-bottom border-end border-success">
-                    <h5><a href="#" className="text-black">專案、課程合作提案</a></h5>
+                    <h5><a onClick={(e) => cancelDefault(e)} href="#" className="text-black stretched-link">專案、課程合作提案</a></h5>
                     <p className="py-5">立即連繫 learnplus@gmail.com</p>
                   </div>
                 </div>
@@ -96,7 +100,7 @@ function About() {
                 <div className="card border-0 bg-white p-7">
                   <img src={propIII} alt="course-22" className="border-1px mb-5" />
                   <div className=" border-bottom border-end border-success">
-                    <h5><a href="#" className="text-black">企業內訓、人才需求</a></h5>
+                    <h5><a onClick={(e) => cancelDefault(e)} href="#" className="text-black stretched-link">企業內訓、人才需求</a></h5>
                     <p className="py-5">立即連繫 learnplus@gmail.com</p>
                   </div>
                 </div>
@@ -105,7 +109,7 @@ function About() {
                 <div className="card border-0 bg-white p-7">
                   <img src={propVI} alt="course-23" className="border-1px mb-5" />
                   <div className=" border-bottom border-end border-success">
-                    <h5><a href="#" className="text-black">品牌合作、媒體採訪</a></h5>
+                    <h5><a onClick={(e) => cancelDefault(e)} href="#" className="text-black stretched-link">品牌合作、媒體採訪</a></h5>
                     <p className="py-5">立即連繫 learnplus@gmail.com</p>
                   </div>
                 </div>

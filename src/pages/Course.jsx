@@ -51,6 +51,9 @@ function Course() {
     },
   ]
 
+  const cancelDefault = (e) => {
+    e.preventDefault()
+  }
   return (
     <>
       <section className="bgdownImg">
@@ -249,7 +252,7 @@ function Course() {
                       <div className="d-flex justify-content-between align-items-center">
                         <div>
                           <p className="fs-7">{lesson.lesson}</p>
-                          <a href="#" className="fs-5 mt-2 text-dark fw-bold stretched-link">{lesson.title}</a>
+                          <a onClick={(e) => cancelDefault(e)} href="#" className="fs-5 mt-2 text-dark fw-bold stretched-link">{lesson.title}</a>
                         </div>
                         <div className="align-middle">
                           <span className="material-icons text-success">done_outline</span>
@@ -328,17 +331,15 @@ function Course() {
                   >
                     全部單位
                   </button>
-                  <button className="border-indigo rounded">
-                    <a href="#" className="fs-5 text-black">
-                      發表留言
-                    </a>
+                  <button type="button" className="border-indigo rounded fs-5 text-black">
+                    發表留言
                   </button>
                   <ul className="dropdown-menu text-center w-100">
                     <li>
-                      <a href="#">第1章.第1單位</a>
+                      <a onClick={(e) => cancelDefault(e)} href="#">第1章.第1單位</a>
                     </li>
                     <li>
-                      <a href="#">第3章.第9單元</a>
+                      <a onClick={(e) => cancelDefault(e)} href="#">第3章.第9單元</a>
                     </li>
                   </ul>
                 </div>
@@ -350,7 +351,7 @@ function Course() {
                   placeholder="搜尋看看~您想問的問題"
                   aria-label="default input example"
                 />
-                <button className="border-0 mt-3 fw-normal fs-6">
+                <button type="button" className="border-0 mt-3 fw-normal fs-6">
                   日期排序
                 </button>
               </div>
@@ -379,7 +380,7 @@ function Course() {
                 <hr />
               </div>
               <div className="text-center">
-                <button className="moreinform border border-1 text-white bg-indigo fs-5 fw-bold p-2">
+                <button type="button" className="moreinform border border-1 text-white bg-indigo fs-5 fw-bold p-2">
                   載入更多討論
                 </button>
               </div>
@@ -507,7 +508,7 @@ function Course() {
                 }}
               >
                 <p className="fs-4 fw-normal">參與互動討論.讓學習更生動</p>
-                <button className="border border-1 text-white bg-indigo fs-5 fw-bold p-2 mt-lg-5 mt-5">
+                <button type="button" className="border border-1 text-white bg-indigo fs-5 fw-bold p-2 mt-lg-5 mt-5">
                   發表留言
                 </button>
               </div>
@@ -748,7 +749,7 @@ function Course() {
                     </div>
                   </div>
                   <div>
-                    <a href="#">
+                    <a href="https://www.instagram.com/" target="_blanket">
                       <svg
                         width="28"
                         height="28"
@@ -764,7 +765,7 @@ function Course() {
                         />
                       </svg>
                     </a>
-                    <a href="#" className="ps-4 pe-1">
+                    <a href="https://www.facebook.com/" target="_blanket" className="ps-4 pe-1">
                       <svg
                         width="26"
                         height="26"
